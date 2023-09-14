@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+:root {
+  /* --main2Color: #6727f3; */
+  /* --main2Color: #7625ed; */
+  /* --mainShadow: #7525ed5c; */
+
+  /* --main2Color: #0143f4;
+  --mainShadow: #0142f45f; */
+  --main2Color: #cd006e;
+  --mainShadow: #cd006d5d;
+  --neomorphismShadow: 8px 8px 23px #bebebe, -8px -8px 23px #ffffff;
+  --neomorphismShadow-inset: inset 8px 8px 23px #bebebe,
+    inset -8px -8px 23px #ffffff;
+}
+body {
+  background-color: #e2e2e2;
+  font-family: "Quicksand", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  color: var(--main2Color);
+  width: 70%;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding-top: 0.4rem;
+  border-bottom: 2px solid var(--main2Color);
+}
+.navbar span {
+  margin: 0 1rem;
+  display: inline-block;
+  padding: 0.6rem 1rem 0.6rem;
+  border-radius: 1.4rem 1.4rem 0 0;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.navbar span:hover,
+.navbar span:active {
+  background-color: var(--main2Color);
+  color: #fff;
+}
+main {
+  width: 70%;
+  margin: 2.4rem auto 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2rem;
+  /* background-color: var(--main2Color); */
+}
+.items {
+  box-shadow: 8px 8px 10px #c3c3c3, -8px -8px 10px #fdfdfd82;
+  /* box-shadow: var(--neomorphismShadow); */
+  border-radius: 1.3rem;
+  padding: 1rem 1.4rem;
+}
+.items:hover .icones i {
+  opacity: 1;
+}
+.items:hover {
+  /* width: 550px; */
+  margin: auto;
+  transform: scale(1.05);
+  transition: all 1s;
+  /* box-shadow: 8px 8px 10px var(--mainShadow), -8px -8px 10px #fdfdfd82; */
+}
+.items-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+.title {
+  color: var(--main2Color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+.time {
+  /* color: #7525ed9b; */
+  color: #737373;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-left: 0.8rem;
+}
+.icones i {
+  color: var(--main2Color);
+  opacity: 0;
+  font-size: 1.2rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  position: absolute;
+  top: 0.1rem;
+  right: 0.6rem;
+}
+.icones .one {
+  right: 3rem;
+}
+.two:hover,
+.one:hover {
+  background-color: var(--main2Color);
+  color: #fff;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  top: -0.5rem;
+  right: 0rem;
+  /* transform: rotate(10deg); */
+}
+.icones .one:hover {
+  right: 2.4rem;
+}
+.paragraph {
+  color: #737373;
+  overflow: scroll;
+  height: 3.5rem;
+}
+.paginatedList {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+.paginatedList li {
+  /* background-color: #0143f4; */
+  border-left: 1px solid var(--main2Color);
+  border-right: 1px solid var(--main2Color);
+  border-bottom: 1px solid var(--main2Color);
+  border-radius: 0.5rem;
+  color: var(--main2Color);
+  font-weight: 700;
+  margin: 0 0.5rem;
+  padding: 0.3rem 1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.paginatedList li:nth-child(4) {
+  cursor: text;
+}
+.paginatedList li:hover {
+  border-radius: 1rem;
+  transform: scale(1.4);
+}
+.paginatedList li:nth-child(4):hover {
+  border-radius: 0.5rem;
+  transform: scale(1);
+}
+/* -------------------------- modal -------------------------- */
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: #55555594;
+  backdrop-filter: blur(2px);
+  /* display: flex; */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  transition: all 1s;
+}
+.modalBody {
+  /* height: 300px; */
+  background-color: #eeeeee;
+  width: 33%;
+  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--mainShadow) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.modalTop {
+  /* border: 1px dashed var(--main2Color); */
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 1.9rem;
+  color: #737373;
+  /* font-weight: 700; */
+}
+.modalTop i {
+  font-size: 5rem;
+  color: var(--main2Color);
+  margin-bottom: 1rem;
+}
+.dText {
+  color: var(--main2Color);
+  /* font-size: 1.2rem; */
+  font-weight: 700;
+  text-decoration: underline;
+}
+.modalResault {
+  margin: 2rem 0 0.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0 1rem;
+}
+.modalResault span {
+  background-color: var(--main2Color);
+  border-radius: 2rem;
+  padding: 0.6rem 1.8rem;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+.modalResault span:hover {
+  transform: scale(0.9);
+}
+/* -------------------------- modal -------------------------- */
