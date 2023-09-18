@@ -38,8 +38,12 @@ body {
   transition: all 0.5s;
   cursor: pointer;
 }
-.navbar span:hover,
-.navbar span:active {
+.navbar .home:hover {
+  border-bottom: none;
+  box-sizing: border-box;
+  transform: scale(1.25);
+}
+.navbar .todos {
   background-color: var(--main2Color);
   color: #fff;
 }
@@ -63,7 +67,7 @@ main {
 }
 .items:hover {
   /* width: 550px; */
-  margin: auto;
+  /* margin: auto; */
   transform: scale(1.05);
   transition: all 1s;
   /* box-shadow: 8px 8px 10px var(--mainShadow), -8px -8px 10px #fdfdfd82; */
@@ -73,12 +77,17 @@ main {
   justify-content: space-between;
   margin-bottom: 0.8rem;
   position: relative;
+  /* background-color: red; */
 }
 .title {
   color: var(--main2Color);
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
+  max-width: 25rem;
+  height: 2rem;
+  /* background-color: rebeccapurple; */
+  overflow: auto;
 }
 .time {
   /* color: #7525ed9b; */
@@ -122,6 +131,7 @@ main {
   list-style-type: none;
   display: flex;
   justify-content: center;
+  margin-bottom: 1.5rem;
 }
 .paginatedList li {
   /* background-color: #0143f4; */
@@ -152,17 +162,16 @@ main {
   width: 100vw;
   height: 100vh;
   background-color: #55555594;
-  backdrop-filter: blur(2px);
+  /* backdrop-filter: blur(2px); */
   /* display: flex; */
   display: none;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   transition: all 1s;
 }
 .modalBody {
-  /* height: 300px; */
   background-color: #eeeeee;
   width: 33%;
   padding: 2rem 1.5rem;
@@ -170,24 +179,32 @@ main {
   box-shadow: var(--mainShadow) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .modalTop {
-  /* border: 1px dashed var(--main2Color); */
-  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
-  border-radius: 0.5rem;
+  height: 14rem;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='28' ry='28' stroke='%23CD006D56' stroke-width='3' stroke-dasharray='9%2c 18' stroke-dashoffset='6' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 28px;
   text-align: center;
   padding: 1.9rem;
   color: #737373;
-  /* font-weight: 700; */
 }
 .modalTop i {
-  font-size: 5rem;
+  font-size: 6rem;
   color: var(--main2Color);
-  margin-bottom: 1rem;
+  margin-bottom: 1.4rem;
 }
 .dText {
   color: var(--main2Color);
   /* font-size: 1.2rem; */
   font-weight: 700;
   text-decoration: underline;
+  display: inline-block;
+  margin-bottom: 0.9rem;
+}
+.modalTitle {
+  font-weight: 600;
+}
+.modalDate {
+  margin-left: 0.6rem;
+  font-size: 0.7rem;
 }
 .modalResault {
   margin: 2rem 0 0.2rem;
