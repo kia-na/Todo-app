@@ -79,12 +79,22 @@ main {
   position: relative;
   /* background-color: red; */
 }
+#check {
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  /* background-color: inherit; */
+}
+#check:checked {
+  color: var(--main2Color);
+  border: 1px solid var(--main2Color);
+}
 .title {
   color: var(--main2Color);
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
-  max-width: 25rem;
+  max-width: 15%;
   height: 2rem;
   /* background-color: rebeccapurple; */
   overflow: auto;
@@ -146,17 +156,17 @@ main {
   transition: all 0.2s;
   cursor: pointer;
 }
-.paginatedList li:nth-child(4) {
+/* .paginatedList li:nth-child(4) {
   cursor: text;
-}
+} */
 .paginatedList li:hover {
   border-radius: 1rem;
   transform: scale(1.4);
 }
-.paginatedList li:nth-child(4):hover {
+/* .paginatedList li:nth-child(4):hover {
   border-radius: 0.5rem;
   transform: scale(1);
-}
+} */
 /* -------------------------- modal -------------------------- */
 .modal {
   width: 100vw;
@@ -173,7 +183,8 @@ main {
 }
 .modalBody {
   background-color: #eeeeee;
-  width: 33%;
+  width: 40%;
+  /* width: 50vw; */
   padding: 2rem 1.5rem;
   border-radius: 1.5rem;
   box-shadow: var(--mainShadow) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
