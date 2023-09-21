@@ -1,0 +1,32 @@
+@media screen and (max-width: 1288px) {
+  main {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  html {
+    font-size: 0.6rem;
+  }
+  .navbar {
+    width: 100%;
+    padding: 0.4rem 18% 0;
+  }
+}
+@media screen and (max-width: 380px) {
+  main {
+    width: 80%;
+  }
+  .navbar {
+    padding: 0.4rem 9% 0;
+  }
+}

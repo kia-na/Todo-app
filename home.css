@@ -109,6 +109,9 @@ button:hover {
   color: #fff;
   width: 13rem;
 }
+#save {
+  display: none;
+}
 .errorText {
   position: absolute;
   top: 7.2rem;
