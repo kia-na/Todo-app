@@ -92,10 +92,9 @@ function pagination() {
     createTodos(data.slice((pageNumber - 1) * 10, pageNumber * 10));
     // return;
   }
+  paginatedList.innerHTML = "";
   let pageCount = Math.ceil(data.length / 10);
-  // console.log(data.length, pageCount);
   for (let i = 1; i <= pageCount; i++) {
-    // console.log(i);
     let li = document.createElement("li");
     li.innerHTML = i;
     paginatedList.append(li);
@@ -104,7 +103,6 @@ function pagination() {
         let url = new URL(location.href);
         url.searchParams.set("page", i);
         location.assign(url.href);
-        // window.location.search = url;
 
         let toDosEachPageArray = data.slice((i - 1) * 10, i * 10);
         console.log(i, toDosEachPageArray);
